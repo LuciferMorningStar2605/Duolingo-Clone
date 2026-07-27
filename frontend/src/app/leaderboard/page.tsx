@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import DashboardLayout from '@/components/DashboardLayout';
 import { useUser } from '@/context/UserContext';
+import { API_BASE_URL } from '@/config';
 import styles from './page.module.css';
 
 interface LeaderboardEntry {
@@ -23,7 +24,7 @@ export default function Leaderboard() {
   useEffect(() => {
     async function loadLeaderboard() {
       try {
-        const res = await fetch('http://localhost:8000/api/leaderboard');
+        const res = await fetch(`${API_BASE_URL}/leaderboard`);
         if (!res.ok) {
           throw new Error('Failed to retrieve leaderboard rankings');
         }

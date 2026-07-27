@@ -36,6 +36,14 @@ app.add_middleware(
 
 DEFAULT_USER_ID = 1  # Simplified: assume this single user is logged in for the assignment
 
+@app.get("/")
+def read_root():
+    return {
+        "message": "Welcome to the Duolingo Clone API!",
+        "status": "online",
+        "docs": "/docs"
+    }
+
 @app.get("/api/health")
 def health_check():
     return {"status": "healthy", "service": "Duolingo Clone Backend"}

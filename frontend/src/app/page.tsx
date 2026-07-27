@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import DashboardLayout from '@/components/DashboardLayout';
 import SkillNode from '@/components/SkillNode';
 import { useUser } from '@/context/UserContext';
+import { API_BASE_URL } from '@/config';
 import styles from './page.module.css';
 
 interface LessonProgress {
@@ -46,7 +47,7 @@ export default function Home() {
   useEffect(() => {
     async function loadPath() {
       try {
-        const res = await fetch('http://localhost:8000/api/course/path');
+        const res = await fetch(`${API_BASE_URL}/course/path`);
         if (!res.ok) {
           throw new Error('Failed to fetch learning path data');
         }

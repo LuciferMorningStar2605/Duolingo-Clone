@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import DashboardLayout from '@/components/DashboardLayout';
 import { useUser } from '@/context/UserContext';
+import { API_BASE_URL } from '@/config';
 import styles from './page.module.css';
 
 interface AchievementResponse {
@@ -23,7 +24,7 @@ export default function Profile() {
   useEffect(() => {
     async function loadAchievements() {
       try {
-        const res = await fetch('http://localhost:8000/api/achievements');
+        const res = await fetch(`${API_BASE_URL}/achievements`);
         if (!res.ok) {
           throw new Error('Failed to retrieve achievements data');
         }

@@ -3,6 +3,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { useRouter } from 'next/navigation';
 import { useUser } from '@/context/UserContext';
+import { API_BASE_URL } from '@/config';
 import styles from './LessonPlayer.module.css';
 
 interface Exercise {
@@ -277,7 +278,7 @@ export default function LessonPlayer({ lesson }: LessonPlayerProps) {
   // Submit completion to backend
   const handleFinishLesson = async () => {
     try {
-      const res = await fetch(`http://localhost:8000/api/lessons/${lesson.id}/complete`, {
+      const res = await fetch(`${API_BASE_URL}/lessons/${lesson.id}/complete`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({

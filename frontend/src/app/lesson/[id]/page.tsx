@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
 import LessonPlayer from '@/components/LessonPlayer';
 import { useUser } from '@/context/UserContext';
+import { API_BASE_URL } from '@/config';
 import styles from './page.module.css';
 
 interface Exercise {
@@ -38,7 +39,7 @@ export default function LessonPage() {
 
     async function fetchLesson() {
       try {
-        const res = await fetch(`http://localhost:8000/api/lessons/${lessonId}`);
+        const res = await fetch(`${API_BASE_URL}/lessons/${lessonId}`);
         if (!res.ok) {
           if (res.status === 404) {
             throw new Error('Lesson not found in the course database');
