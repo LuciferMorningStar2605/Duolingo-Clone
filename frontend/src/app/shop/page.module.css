@@ -1,0 +1,123 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--color-text-main);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+.balanceCard {
+  background-color: var(--color-blue-light);
+  border: 2px solid var(--color-blue-dark);
+  border-radius: 20px;
+  padding: 20px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 0 var(--color-blue-dark);
+}
+
+.balanceInfo h2 {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-blue-dark);
+}
+
+.balanceInfo p {
+  font-size: 14px;
+  color: var(--color-text-main);
+  margin-top: 2px;
+}
+
+.gemDisplay {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.shopItem {
+  background-color: var(--color-white);
+  border: 2px solid var(--color-gray-200);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  box-shadow: 0 4px 0 var(--color-gray-200);
+  transition: transform 0.2s;
+}
+
+.shopItem:hover:not(.mockItem) {
+  transform: translateY(-2px);
+}
+
+.itemIcon {
+  font-size: 40px;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 16px;
+  background-color: var(--color-gray-100);
+  flex-shrink: 0;
+}
+
+.itemInfo {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.itemTitle {
+  font-weight: 800;
+  font-size: 18px;
+  color: var(--color-text-main);
+}
+
+.itemDesc {
+  font-size: 13px;
+  color: var(--color-gray-500);
+  line-height: 1.4;
+}
+
+.buyBtn {
+  flex-shrink: 0;
+  min-width: 130px;
+}
+
+/* Mock shop decoration styles */
+.mockItem {
+  opacity: 0.7;
+}
+
+.comingSoonBadge {
+  font-size: 11px;
+  font-weight: 800;
+  background-color: var(--color-gray-200);
+  color: var(--color-gray-500);
+  padding: 4px 8px;
+  border-radius: 20px;
+  align-self: flex-start;
+}

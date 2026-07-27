@@ -1,0 +1,25 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  background-color: var(--color-white);
+}
+
+.mainContent {
+  flex-grow: 1;
+  margin-left: var(--sidebar-width);
+  margin-top: var(--header-height);
+  padding: 40px;
+  min-height: calc(100vh - var(--header-height));
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsive Overrides */
+@media (max-width: 768px) {
+  .mainContent {
+    margin-left: 0;
+    margin-top: var(--header-height);
+    margin-bottom: 64px; /* Space for mobile bottom nav */
+    padding: 20px 16px;
+  }
+}

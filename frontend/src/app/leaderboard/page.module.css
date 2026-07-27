@@ -1,0 +1,215 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.title {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 28px;
+  color: var(--color-text-main);
+  text-align: center;
+  margin-bottom: 12px;
+}
+
+/* Podium layouts */
+.podiumContainer {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+  height: 220px;
+}
+
+.podiumSpot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.podiumAvatar {
+  border-radius: 50%;
+  border: 4px solid var(--color-gray-200);
+  background-color: var(--color-gray-100);
+  transition: transform 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.podiumSpot:hover .podiumAvatar {
+  transform: scale(1.05);
+}
+
+.podiumBadge {
+  margin-top: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--color-gray-400);
+  color: #fff;
+  font-weight: 800;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--color-white);
+  z-index: 5;
+}
+
+.gold .podiumBadge { background-color: var(--color-yellow); }
+.silver .podiumBadge { background-color: var(--color-gray-400); }
+.bronze .podiumBadge { background-color: var(--color-orange); }
+
+.gold .podiumAvatar { border-color: var(--color-yellow); }
+.silver .podiumAvatar { border-color: var(--color-gray-300); }
+.bronze .podiumAvatar { border-color: var(--color-orange-dark); }
+
+.podiumPedestal {
+  width: 100%;
+  background-color: var(--color-gray-100);
+  border: 2px solid var(--color-gray-200);
+  border-bottom: none;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  margin-top: 8px;
+}
+
+.gold .podiumPedestal { height: 110px; background-color: var(--color-yellow-light); border-color: var(--color-yellow-dark); }
+.silver .podiumPedestal { height: 80px; background-color: var(--color-gray-100); border-color: var(--color-gray-300); }
+.bronze .podiumPedestal { height: 60px; background-color: var(--color-orange-light); border-color: var(--color-orange-dark); }
+
+.podiumName {
+  font-weight: 800;
+  font-size: 13px;
+  max-width: 90px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: center;
+}
+
+.podiumXp {
+  font-weight: 700;
+  font-size: 12px;
+  color: var(--color-gray-500);
+}
+
+.gold .podiumXp { color: var(--color-yellow-dark); }
+.silver .podiumXp { color: var(--color-gray-500); }
+.bronze .podiumXp { color: var(--color-orange-dark); }
+
+/* List layout */
+.listContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  background-color: var(--color-white);
+}
+
+.rowCard {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 14px 20px;
+  border-radius: 16px;
+  border: 2px solid var(--color-gray-200);
+  background-color: var(--color-white);
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.rowCard:hover {
+  background-color: var(--color-gray-100);
+}
+
+.highlightCard {
+  border-color: var(--color-blue);
+  background-color: var(--color-blue-light) !important;
+  box-shadow: 0 4px 0 var(--color-blue-dark);
+}
+
+.rank {
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-gray-500);
+  width: 24px;
+  text-align: center;
+}
+
+.highlightCard .rank {
+  color: var(--color-blue-dark);
+}
+
+.avatar {
+  border-radius: 50%;
+  background-color: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  flex-shrink: 0;
+}
+
+.username {
+  font-weight: 800;
+  font-size: 16px;
+  flex-grow: 1;
+  color: var(--color-text-main);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.highlightCard .username {
+  color: var(--color-blue-dark);
+}
+
+.streak {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+}
+
+.xp {
+  font-family: 'Outfit', sans-serif;
+  font-weight: 800;
+  font-size: 16px;
+  color: var(--color-text-main);
+  width: 80px;
+  text-align: right;
+}
+
+.highlightCard .xp {
+  color: var(--color-blue-dark);
+}
+
+.loaderContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  gap: 16px;
+  font-weight: 700;
+  color: var(--color-gray-500);
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid var(--color-gray-200);
+  border-top-color: var(--color-green);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}

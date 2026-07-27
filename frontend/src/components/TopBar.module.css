@@ -1,0 +1,94 @@
+.topbar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: var(--sidebar-width);
+  height: var(--header-height);
+  border-bottom: 2px solid var(--color-gray-200);
+  background-color: var(--color-white);
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 24px;
+  z-index: 90;
+}
+
+.statsContainer {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.statItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 800;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+  user-select: none;
+}
+
+.statItem:hover {
+  background-color: var(--color-gray-100);
+}
+
+.streak {
+  color: var(--color-orange);
+}
+
+.gems {
+  color: var(--color-blue);
+}
+
+.hearts {
+  color: var(--color-pink);
+}
+
+.heartTimer {
+  font-size: 11px;
+  color: var(--color-gray-500);
+  font-weight: 600;
+  margin-left: 2px;
+}
+
+.flagContainer {
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px 12px;
+  border-radius: 12px;
+  transition: background-color 0.2s;
+}
+
+.flagContainer:hover {
+  background-color: var(--color-gray-100);
+}
+
+.flag {
+  font-size: 20px;
+}
+
+.langText {
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-gray-500);
+  text-transform: uppercase;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .topbar {
+    left: 0;
+    padding: 0 16px;
+  }
+  .langText {
+    display: none;
+  }
+}
