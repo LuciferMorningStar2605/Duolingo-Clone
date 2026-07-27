@@ -76,9 +76,6 @@ export default function Home() {
         <div className={styles.loaderContainer}>
           <div className={styles.spinner}></div>
           <p>Loading your learning path...</p>
-          <span style={{ fontSize: '11px', opacity: 0.6, marginTop: '8px' }}>
-            Connecting to API: {API_BASE_URL}
-          </span>
         </div>
       ) : error ? (
         <div className={styles.loaderContainer}>

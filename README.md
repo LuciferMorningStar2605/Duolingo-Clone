@@ -10,6 +10,12 @@ A pixel-perfect, highly responsive clone of the Duolingo web application. Built 
 
 ---
 
+## 🔗 Live Production Links
+* **Frontend Client (Next.js)**: [https://duolingo-clone-frontend-isng4e88q.vercel.app](https://duolingo-clone-frontend-isng4e88q.vercel.app)
+* **Backend API (FastAPI)**: [https://duolingo-clone-backend.vercel.app](https://duolingo-clone-backend.vercel.app)
+
+---
+
 ## 🌟 Core Features
 
 ### 1. Learning Path / Skill Tree
