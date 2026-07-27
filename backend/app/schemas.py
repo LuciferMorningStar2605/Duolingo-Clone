@@ -68,6 +68,7 @@ class SkillResponse(BaseModel):
     current_lesson_order: int = 1
     total_lessons: int = 0
     completed_lessons_count: int = 0
+    unlocked: bool = False
 
     class Config:
         from_attributes = True
