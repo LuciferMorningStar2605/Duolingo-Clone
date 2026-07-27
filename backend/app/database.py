@@ -1,8 +1,13 @@
+import os
 from sqlalchemy import create_engine
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 
 DATABASE_URL = "sqlite:///./duolingo.db"
+
+# Check if running in Vercel Serverless environment
+if os.environ.get("VERCEL"):
+    DATABASE_URL = "sqlite:////tmp/duolingo.db"
 
 engine = create_engine(
     DATABASE_URL, connect_args={"check_same_thread": False}
